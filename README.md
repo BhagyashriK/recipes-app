@@ -9,8 +9,8 @@ Prettier - code formatter
 
 # Local Setup Steps:
 
-git clone repo url
-run `yarn install` to install the dependencies
+clone repository using `git clone git@github.com:BhagyashriK/recipes-app.git`
+run `yarn install` to install the dependencies into root directory
 run `yarn start` to start dev server
 
 # Production Build Steps:
