@@ -1,4 +1,4 @@
-React application showcasing recipe list and recipe details
+Responsive web application showcasing recipe list and recipe details
 
 **Tech Stack:**
 
