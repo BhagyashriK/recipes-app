@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 
-function App() {
+import { GlobalStyles } from "./views/components/normalize/normalize.index";
+import Recipes from "./views/routes/recipes/recipes.index";
+import RecipeDetails from "./views/routes/recipe-details/recipe-details.index";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Normalize browser default style */}
+      <GlobalStyles />
+
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/recipes" component={Recipes} />
+          <Route exact path="/recipe-details/" component={RecipeDetails} />
+          <Route path="*" render={() => <Redirect to="/recipes" />} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
